@@ -24,4 +24,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: ghcr.io/Accendit/azdevops_discord:latest
+        tags: ghcr.io/accendit/azdevops_discord:latest
