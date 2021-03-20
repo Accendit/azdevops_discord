@@ -20,7 +20,7 @@ def process_pr(devops_body: object):
                     'url': devops_body['resource']['createdBy']['url']
                 },
                 'footer': {
-                    'text': f"Status: {devops_body['resource']['status']} Merge : {devops_body['resource']['mergeStatus']}"
+                    'text': f"Status: {devops_body['resource']['status']}, Merge: {devops_body['resource']['mergeStatus']}"
                 }
             }
         ]
