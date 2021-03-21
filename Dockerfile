@@ -2,11 +2,13 @@ FROM python:3.8-slim
 
 LABEL org.opencontainers.image.source https://github.com/Accendit/azdevops_discord
 
-ADD ./ /opt
+ADD azdevops_discord/* /opt/azdevops_discord/azdevops_discord/
 
-WORKDIR /opt
+ADD Pipfile* /opt/azdevops_discord
+
+WORKDIR /opt/azdevops_discord
 
 RUN pip install pipenv waitress && \
     pipenv install --system
 
-ENTRYPOINT [ "waitress-serve", "--port=80", "app:app" ]
+ENTRYPOINT [ "waitress-serve", "--port=80", "azdevops_discord:app" ]
